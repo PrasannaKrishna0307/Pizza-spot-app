@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Spot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Pizza Spot</h1>
+    </header>
+
+    <section class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>At Pizza Spot, we believe in the power of great ingredients and authentic recipes. Our pizzas are made with love, using locally sourced, fresh ingredients to create the perfect slice every time.</p>
+            <p>Founded in 1970, we’ve been serving our community with delicious pizzas and a smile. Join us on our journey to spread happiness, one slice at a time!</p>
+        </div>
+    </section>
+
+    <section class="menu-highlights">
+        <h2>Menu Highlights</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://www.dominos.co.in//files/items/Margherit.jpg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic cheese and tomato pizza with fresh basil.</p>
+                <span class="price">599 Rs</span>
+                <button onclick="addToCart('Margherita Pizza', 599)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://assets-us-01.kc-usercontent.com/4353bced-f940-00d0-8c6e-13a0a4a7f5c2/2ac60829-5178-4a6e-80cf-6ca43d862cee/Quick-and-Easy-Pepperoni-Pizza-700x700.jpeg?w=1280&auto=format" alt="Pepperoni Pizza">
+                <h3>Pepperoni Pizza</h3>
+                <p>Loaded with spicy pepperoni and mozzarella cheese.</p>
+                <span class="price">899 Rs</span>
+                <button onclick="addToCart('Pepperoni Pizza', 899)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/pizza-recipe-2-500x500.jpg" alt="Veggie Pizza">
+                <h3>Veggie Pizza</h3>
+                <p>A delightful mix of seasonal vegetables and mozzarella.</p>
+                <span class="price">699 Rs</span>
+                <button onclick="addToCart('Veggie Pizza', 699)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-now">
+        <h2>Order Now</h2>
+        <form class="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="pizza">Select Pizza:</label>
+            <select id="pizza" name="pizza" required>
+                <option value="">--Choose a Pizza--</option>
+                <option value="margherita">Margherita Pizza</option>
+                <option value="pepperoni">Pepperoni Pizza</option>
+                <option value="veggie">Veggie Pizza</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+            <button type="submit" class="cta-button">Place Order</button>
+        </form>
+    </section>
+
+    <section class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart"></ul>
+        <p id="total"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pizza Spot</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
